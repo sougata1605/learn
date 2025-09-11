@@ -1,4 +1,4 @@
-// src/components/DateInput.jsx
+
 import React, { useState } from "react";
 
 export default function DateInput({ onCalculate }) {
@@ -8,7 +8,7 @@ export default function DateInput({ onCalculate }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validate: must be an integer (allow negative if you want)
+   
     const n = parseInt(days, 10);
     if (days.trim() === "") {
       alert("Please enter a number of days.");
@@ -19,7 +19,7 @@ export default function DateInput({ onCalculate }) {
       return;
     }
     onCalculate(n);
-    // optional: clear input
+    
     setDays("");
   };
 
