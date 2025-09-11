@@ -1,4 +1,3 @@
-// src/components/History.jsx
 import React from "react";
 import { formatDateLong } from "../utils/dateUtils";
 
@@ -11,7 +10,7 @@ export default function History({ entries = [] }) {
       <ul>
         {entries.map((it, i) => (
           <li key={i}>
-            {it.days} day(s) → {formatDateLong(it.result)}
+            From {formatDateLong(it.startDate)} + {it.days} day(s) → {formatDateLong(it.result)}
           </li>
         ))}
       </ul>
