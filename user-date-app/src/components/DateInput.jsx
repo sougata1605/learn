@@ -26,7 +26,7 @@ export default function DateInput({ onCalculate }) {
   return (
     <form onSubmit={handleSubmit} className="form">
       <label>
-        Number of days:
+        Number of day:
         <input
           type="number"
           value={days}
