@@ -2,8 +2,10 @@
 import React, { useState } from "react";
 
 export default function DateInput({ onCalculate }) {
-  // local state for the input field (string)
+  
   const [days, setDays] = useState("");
+
+  const [startDate, setStartDate] = useState(""); // user selected date 
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,8 +27,17 @@ export default function DateInput({ onCalculate }) {
 
   return (
     <form onSubmit={handleSubmit} className="form">
-      <label>
-        Number of days:
+<label>
+  Start Date:
+  <input
+    type="date"
+    value={startDate}
+    onChange={(e) => setStartDate(e.target.value)}
+  />
+</label>
+
+<label>
+        Number of day:
         <input
           type="number"
           value={days}
