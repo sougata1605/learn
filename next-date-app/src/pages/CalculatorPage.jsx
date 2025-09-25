@@ -1,4 +1,4 @@
-// src/pages/CalculatorPage.jsx
+
 import React, { useState } from "react";
 import DateInput from "../components/DateInput";
 import DateResult from "../components/DateResult";
@@ -9,8 +9,20 @@ export default function CalculatorPage() {
   const [currentResult, setCurrentResult] = useState(null);
   const [history, setHistory] = useState([]); // most recent first
 
-  const handleCalculate = (days) => {
-    const base = new Date();
+  const handleCalculate = (days,startDate) => {
+    
+
+
+     const base = startDate;
+     alert(base);
+
+     if(startDate==="")
+     {
+           base = new Date();
+     }
+
+
+
     const result = getNextDate(base, days);
 
     setCurrentResult(result);

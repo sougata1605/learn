@@ -12,17 +12,23 @@ export default function DateInput({ onCalculate }) {
 
    
     const n = parseInt(days, 10);
-    if (days.trim() === "") {
-      alert("Please enter a number of days.");
+    const ds= (startDate);
+
+
+
+    if (days.trim() === "" || startDate.trim()==="") {
+      alert("Please enter a number of days or dates .");
       return;
     }
     if (Number.isNaN(n)) {
       alert("Please enter a valid whole number (e.g., 5).");
       return;
     }
-    onCalculate(n);
+    onCalculate(n,ds);
     
     setDays("");
+
+    
   };
 
   return (
