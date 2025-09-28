@@ -8,3 +8,12 @@ let array_original=[];
 
 /// traverse an array 
 
+for(let i=0; i<length;i++)
+{
+    array_original.push(array[i]);
+
+}
+
+console.log("array_original ="+ array_original );
+
+
