@@ -11,4 +11,4 @@ for (let i = 0; i < length; i++) {
     }
 }
 
-console.log("Array after moving all negative numbers:", array);
+console.log("Array after moving all negative numbers: "+  array);
