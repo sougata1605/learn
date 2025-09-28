@@ -14,6 +14,6 @@ for(let i=0; i<length;i++)
 
 }
 
-console.log("array_original ="+ array_original );
+console.log("array_original = "+ array_original );
 
 
