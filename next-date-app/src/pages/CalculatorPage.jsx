@@ -14,7 +14,7 @@ export default function CalculatorPage() {
 
 
      const base = startDate;
-     alert(base);
+    // alert(base);
 
      if(startDate==="")
      {
