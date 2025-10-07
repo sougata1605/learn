@@ -5,10 +5,27 @@ let high =array.length;
 let min=0;
 let mid=0;
 
-while(mid<=high)
-{
-    if(array[i]===0)
-    {
-        
+function sort012(array) {
+    let low = 0;
+    let mid = 0;
+    let high = array.length - 1;
+
+    while (mid <= high) {
+        if (array[mid] === 0) {
+            [array[low], array[mid]] = [array[mid], array[low]];
+            low++;
+            mid++;
+        } else if (array[mid] === 1) {
+            mid++;
+        } else {
+            [array[mid], array[high]] = [array[high], array[mid]];
+            high--;
+        }
     }
+
+    return array;
 }
+
+
+
+console.log(sort012(array));
